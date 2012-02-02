@@ -33,8 +33,8 @@ from packageutils.test import get_package_runner
 from packageutils.test import run_tests
 
 def runtests(verbosity=1, interactive=True):
-    package_dir = os.path.dirname(__file__)
     """Run Django Test"""
+    package_dir = os.path.dirname(__file__)
     test_runner = get_package_runner(package_dir, verbosity, interactive)
     run_tests(test_runner, ['blogs'])
 
