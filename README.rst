@@ -9,9 +9,6 @@ are available.
 
 3.  Automatically create user within syncdb command
 
-4.  Automatically versioning PyPI package with git tag
-    http://dcreager.net/2010/02/10/setuptools-git-version-numbers/
-
 How to install
 ----------------------------
 Use pip comand or easy_install::
@@ -104,18 +101,3 @@ Automatically create user within syncdb command
 Add ``packageutils.syncdb.autouser`` in ``INSTALLED_APPS`` then admin user is created automatically
 within syncdb command (password will be set as 'admin')
 
-Automatically versioning PyPI package with git tag
-----------------------------------------------------------------------------------------------------
-Write your ``setup.py`` as::
-
-    from setuptools import setup, find_packages
-    from packageutils.version import get_git_version
-
-    version = get_git_version()
-
-    setup(
-        # ... some configures
-        version=version,
-    )
-
-See http://dcreager.net/2010/02/10/setuptools-git-version-numbers/ for more detail
